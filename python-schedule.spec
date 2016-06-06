@@ -61,3 +61,6 @@ rm -rf %{buildroot}
 
 # {{{1 changelog
 %changelog
+* Mon Jun 06 2016 John Florian <jflorian@doubledog.org> 0.3.2-1
+- new package built with tito
+
