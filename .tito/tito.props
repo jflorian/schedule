@@ -7,4 +7,7 @@ changelog_format = %s (%ae)
 [f23]
 disttag = .fc23
 
+[f24]
+disttag = .fc24
+
 # vim: filetype=configparser
