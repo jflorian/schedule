@@ -7,7 +7,7 @@ Name:           python-schedule
 
 # see HISTORY.rst
 Version:        0.3.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 
 # {{{1 package meta-data
 Summary:        Python job scheduling for humans
@@ -61,6 +61,9 @@ rm -rf %{buildroot}
 
 # {{{1 changelog
 %changelog
+* Tue Aug 09 2016 John Florian <jflorian@doubledog.org> 0.3.2-2
+- New - tito releaser for Fedora 24 (jflorian@doubledog.org)
+
 * Mon Jun 06 2016 John Florian <jflorian@doubledog.org> 0.3.2-1
 - new package built with tito
 
