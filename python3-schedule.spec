@@ -54,6 +54,9 @@ clockwork Ruby module.
 
 # {{{1 changelog
 %changelog
+* Wed Nov 29 2017 John Florian <jflorian@doubledog.org> 0.5.0-1
+- new package built with tito
+
 * Tue Aug 09 2016 John Florian <jflorian@doubledog.org> 0.3.2-2
 - New - tito releaser for Fedora 24 (jflorian@doubledog.org)
 
