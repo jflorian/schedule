@@ -6,8 +6,8 @@
 Name:           python-schedule
 
 # see HISTORY.rst
-Version:        0.3.2
-Release:        2%{?dist}
+Version:        0.5.0
+Release:        1%{?dist}
 
 # {{{1 package meta-data
 Summary:        Python job scheduling for humans
