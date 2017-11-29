@@ -3,7 +3,7 @@
 %global python_package_name schedule
 %global python_setup setup.py
 
-Name:           python-schedule
+Name:           python3-schedule
 
 # see HISTORY.rst
 Version:        0.5.0
@@ -19,9 +19,9 @@ URL:            http://www.doubledog.org/git/%{name}/
 Source0:        %{name}-%{version}.tar.gz
 BuildArch:      noarch
 
-BuildRequires:  python2-devel
+BuildRequires:  python%{python3_pkgversion}-devel
 
-Requires:       python2
+Requires:       python%{python3_pkgversion}
 
 %description
 An in-process scheduler for periodic jobs that uses the builder pattern for
@@ -38,19 +38,19 @@ clockwork Ruby module.
 
 # {{{1 build
 %build
-%{__python2} %{python_setup} build
+%{__python3} %{python_setup} build
 
 # {{{1 install
 %install
 
-%{__python2} %{python_setup} install -O1 --skip-build --root %{buildroot}
+%{__python3} %{python_setup} install -O1 --skip-build --root %{buildroot}
 
 # {{{1 files
 %files
 
 %doc *.rst *.txt
-%{python2_sitelib}/%{python_package_name}*egg-info
-%{python2_sitelib}/%{python_package_name}/
+%{python3_sitelib}/%{python_package_name}*egg-info
+%{python3_sitelib}/%{python_package_name}/
 
 # {{{1 changelog
 %changelog
