@@ -18,7 +18,6 @@ License:        MIT
 URL:            http://www.doubledog.org/git/%{name}/
 Source0:        %{name}-%{version}.tar.gz
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  python2-devel
 
@@ -43,17 +42,11 @@ clockwork Ruby module.
 
 # {{{1 install
 %install
-rm -rf %{buildroot}
 
 %{__python2} %{python_setup} install -O1 --skip-build --root %{buildroot}
 
-# {{{1 clean
-%clean
-rm -rf %{buildroot}
-
 # {{{1 files
 %files
-%defattr(-,root,root,-)
 
 %doc *.rst *.txt
 %{python2_sitelib}/%{python_package_name}*egg-info
