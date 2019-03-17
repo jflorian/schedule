@@ -4,12 +4,9 @@ tagger = tito.tagger.ReleaseTagger
 changelog_do_not_remove_cherrypick = 0
 changelog_format = %s (%ae)
 
-[f25]
-disttag = .fc25
+[f28]
+disttag = .fc28
 
-[f26]
-disttag = .fc26
-
-[f27]
-disttag = .fc27
+[f29]
+disttag = .fc29
 
