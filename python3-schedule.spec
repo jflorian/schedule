@@ -7,7 +7,7 @@ Name:           python3-schedule
 
 # see HISTORY.rst
 Version:        1.1.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 
 # {{{1 package meta-data
 Summary:        Python job scheduling for humans
@@ -55,6 +55,9 @@ clockwork Ruby module.
 
 # {{{1 changelog
 %changelog
+* Mon Feb 07 2022 John Florian <jflorian@doubledog.org> 1.1.0-2
+- Bug - [spec] missing dep on setuptools (jflorian@doubledog.org)
+
 - Release 1.1.0 (sijmenhuizenga@gmail.com)
 - Update version string conf.py to current version (#453)
   (sijmenhuizenga@gmail.com)
