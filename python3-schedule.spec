@@ -6,7 +6,7 @@
 Name:           python3-schedule
 
 # see HISTORY.rst
-Version:        0.6.0
+Version:        1.1.0
 Release:        1%{?dist}
 
 # {{{1 package meta-data
@@ -54,106 +54,72 @@ clockwork Ruby module.
 
 # {{{1 changelog
 %changelog
-* Sun Mar 17 2019 John Florian <jflorian@doubledog.org> 0.6.0-1
-- Change - [tito] freshen release targets (jflorian@doubledog.org)
-- Bump version to 0.6.0 (mail@dbader.org)
-- Clean up error messages (mail@dbader.org)
-- Change hour validation (39542938+ConnorSkees@users.noreply.github.com)
-- Missed quotes (39542938+ConnorSkees@users.noreply.github.com)
-- Use single quotes instead of double quotes
+- Release 1.1.0 (sijmenhuizenga@gmail.com)
+- Update version string conf.py to current version (#453)
+  (sijmenhuizenga@gmail.com)
+- Module Queue should be queue (#448) (sijmenhuizenga@gmail.com)
+- Split up Github Actions (#442) (sijmenhuizenga@gmail.com)
+- Add execute until functionality (#195) (me@fredthomsen.net)
+- Add more explanatory message on IntervalError exception (#439)
+  (pedrochaveslimas3@gmail.com)
+- Fix typos in __init__.py (#437) (70908187+ebllg@users.noreply.github.com)
+- include changelog in html docs (#436)
+  (70908187+ebllg@users.noreply.github.com)
+- Add more descriptive error messages (#280)
+  (39542938+connorskees@users.noreply.github.com)
+- Fix typos in 'multiple schedulers' docs (#435) (sijmenhuizenga@gmail.com)
+- Add type annotations (#427) (info@martin-thoma.de)
+- Reformat code using Black formatter (#432) (info@martin-thoma.de)
+- Added zcking to authors (sijmenhuizenga@gmail.com)
+- Update logging docs (sijmenhuizenga@gmail.com)
+- Remove default logger configuration (sijmenhuizenga@gmail.com)
+- Installation instructions cleanup + added conda  (#421)
+  (sijmenhuizenga@gmail.com)
+- Fix str of job when there is no __name__ (#430) (avery@averyjfischer.com)
+- Added a decorator (#148) (ramonhagenaars@gmail.com)
+- Fix typo in examples.rst (#426) (sijmenhuizenga@gmail.com)
+- Update GitHub button in docs (mail@dbader.org)
+- Added way to retrieve jobs per tags (#419)
+  (17214791+Skenvy@users.noreply.github.com)
+- Release v1.0.0 (#418) (SijmenHuizenga@users.noreply.github.com)
+- Move and update deployment docs into development.rst (#417)
+  (SijmenHuizenga@users.noreply.github.com)
+- Drop python 2.7 and 3.5, add python 3.9 (#416)
+  (SijmenHuizenga@users.noreply.github.com)
+- Fix hour.at('MM:SS') parsing bug (#290) (Elad.Birnboim@microsoft.com)
+- Fix coveralls after update to 3.0.0 (sijmenhuizenga@gmail.com)
+- Make long-running jobs not skip periods (sijmenhuizenga@gmail.com)
+- Improve docs of .at() method to better show allowed options
+  (sijmenhuizenga@gmail.com)
+- Make idle_seconds explicitly return None in case of no scheduled jobs (#401)
+  (SijmenHuizenga@users.noreply.github.com)
+- Fix import of queue (#306) (chankey007@gmail.com)
+- Add example and unit test for idle_seconds() (#399)
+  (SijmenHuizenga@users.noreply.github.com)
+- Revamp and extend documentation (#395)
+  (SijmenHuizenga@users.noreply.github.com)
+- Log all messages as debug (sijmenhuizenga@gmail.com)
+- Add seconds example to readme (#170) (vubon.roy@gmail.com)
+- Replace Travis with Github Actions (#398)
+  (SijmenHuizenga@users.noreply.github.com)
+- Bugfix: tuesday.at('HH:MM:SS') where HMS=now+10s doesn't run today #331
+  (#337) (pawel@kumor.it)
+- Mute logging (aisk1988@gmail.com)
+- Issue #296: DeprecationWarning. Fix working in python2.7 and 3.7
+  (garikoitz1988@gmail.com)
+- Issue #296:  DeprecationWarning 'collections' (garikoitz1988@gmail.com)
+- Improve testing (mim@mim.pw)
+- Test repr when at_time is not None
   (39542938+ConnorSkees@users.noreply.github.com)
-- Add Connor Skees to the list of authors
+- Surround function in blank lines
   (39542938+ConnorSkees@users.noreply.github.com)
-- Add `pass` to emphasize empty class
+- Linter is not a fan of lambdas
   (39542938+ConnorSkees@users.noreply.github.com)
-- Fix hour if statement (39542938+ConnorSkees@users.noreply.github.com)
-- Properly test latest > interval
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Delete more duplicated code (39542938+ConnorSkees@users.noreply.github.com)
-- Remove duplicated code (39542938+ConnorSkees@users.noreply.github.com)
-- Remove unreachable code (39542938+ConnorSkees@users.noreply.github.com)
-- Finish reverting changes (39542938+ConnorSkees@users.noreply.github.com)
-- Revert unittest changes (39542938+ConnorSkees@users.noreply.github.com)
-- Improve coverage (39542938+ConnorSkees@users.noreply.github.com)
-- Properly test invalid hours/minutes/seconds
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Missed a line (39542938+ConnorSkees@users.noreply.github.com)
-- Fix line lengths to be under 80
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Test more raises (39542938+ConnorSkees@users.noreply.github.com)
-- Properly implement context managers with assertRaises
-  (39542938+ConnorSkees@users.noreply.github.com)
-- More descriptive assertions (39542938+ConnorSkees@users.noreply.github.com)
-- Test interval errors more comprehensively
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Improve test coverage (39542938+ConnorSkees@users.noreply.github.com)
-- Change exception assertions to context managers
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Test interval errors (39542938+ConnorSkees@users.noreply.github.com)
-- Make linter happy :) (39542938+ConnorSkees@users.noreply.github.com)
-- Line lengths under 80 characters
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Unit tests under 79 characters
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Update unit tests to reflect new exceptions
-  (39542938+ConnorSkees@users.noreply.github.com)
-- ValueError to ScheduleValueError
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Change time assertions to ScheduleValueError
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Change ValueError to ScheduleValueError
-  (39542938+ConnorSkees@users.noreply.github.com)
-- 2 lines between classes (39542938+ConnorSkees@users.noreply.github.com)
-- Change interval assertions to IntervalError
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Missed == to != (39542938+ConnorSkees@users.noreply.github.com)
-- Add more descriptive exceptions
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Fix line length to be 79 characters
-  (39542938+ConnorSkees@users.noreply.github.com)
-- Add assertion error messages (39542938+ConnorSkees@users.noreply.github.com)
-- Get the line length below 80 (nathan.wailes@gmail.com)
-- Add Nathan Wailes to the list of authors (nathan.wailes@gmail.com)
-- Update FAQ.rst (mail@dbader.org)
-- Make the at() docstring more descriptive (nathan.wailes@gmail.com)
-- Don't allow whitespace in the string passed to at() (nathan.wailes@gmail.com)
-- Remove two unnecessary tests (nathan.wailes@gmail.com)
-- Check the at() format based on the selected units (nathan.wailes@gmail.com)
-- Raise an exception if at() is not passed a string in the right format
-  (nathan.wailes@gmail.com)
-- Update the READMEs now that the two-colon every().minute.at('::SS') syntax
-  has been removed (nathan.wailes@gmail.com)
-- Fix a bug where the at(':SS') syntax wasn't working (nathan.wailes@gmail.com)
-- Remove unnecessary tests (nathan.wailes@gmail.com)
-- Make the at() function easier to read (nathan.wailes@gmail.com)
-- Update the at() docstring to reflect its new abilities
-  (nathan.wailes@gmail.com)
-- Support recurring tasks in the form "every().minute.at('::30')"
-  (nathan.wailes@gmail.com)
-- Get the code's line lengths below 80 (nathan.wailes@gmail.com)
-- Make at() accept timestamps with 1 second precision (nathan.wailes@gmail.com)
-- Ignore the .idea/ directory used by PyCharm (nathan.wailes@gmail.com)
-- Link to LICENSE directly (karl.coelho1@gmail.com)
-- Disable Python 3.7 builds again (mail@dbader.org)
-- Fix CI build (hello@dbader.org)
-- Add Python3.7 to CI tests (alx.kuzm@gmail.com)
-- Update sidebarintro.html (hello@dbader.org)
-- Update schedule/__init__.py (chenxuefeng1207@163.com)
-- Fix incorrect code sample in FAQs (29029116+aydwi@users.noreply.github.com)
-- Sync Docstring with README (waydi1@gmail.com)
-- Update FAQ.rst (hello@dbader.org)
-- Update README.rst (hello@dbader.org)
-- Remove duplicate tags type check (mail@dbader.org)
-- Fix coverage command (mail@dbader.org)
-- Ensure failed coveralls run fails the build (mail@dbader.org)
-- Fix coverage tracking (mail@dbader.org)
-
-* Wed Nov 29 2017 John Florian <jflorian@doubledog.org> 0.5.0-1
-- new package built with tito
-
-* Tue Aug 09 2016 John Florian <jflorian@doubledog.org> 0.3.2-2
-- New - tito releaser for Fedora 24 (jflorian@doubledog.org)
-
-* Mon Jun 06 2016 John Florian <jflorian@doubledog.org> 0.3.2-1
-- new package built with tito
+- Update string tests (39542938+ConnorSkees@users.noreply.github.com)
+- Add tests for repr (39542938+ConnorSkees@users.noreply.github.com)
+- Make repr non-recursive (39542938+ConnorSkees@users.noreply.github.com)
+- Add __str__ to Job (39542938+ConnorSkees@users.noreply.github.com)
+- line break for flake8 check (kingzach77@gmail.com)
+- default config added to logger; logs added for job clearing/cancelling
+  (kingzach77@gmail.com)
 
